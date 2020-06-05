@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
-import org.springframework.stereotype.Service;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -14,8 +13,9 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CustomAuthenticationFailureHandler implements AuthenticationFailureHandler {
+public class CustomAuthenticationFailureHandler  implements AuthenticationFailureHandler {
     private ObjectMapper objectMapper = new ObjectMapper();
+
     @Override
     public void onAuthenticationFailure(
             HttpServletRequest request,
@@ -25,7 +25,7 @@ public class CustomAuthenticationFailureHandler implements AuthenticationFailure
 
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
         Map<String, Object> data = new HashMap<>();
-        data.put("does", "this work");
+        data.put("workskkk", true);
         data.put(
                 "timestamp",
                 Calendar.getInstance().getTime());

@@ -1,8 +1,9 @@
-package com.iamkosgei.Spring.Boot.JPA.JWT.utils;
+package com.iamkosgei.Spring.Boot.JPA.JWT;
 
 import com.iamkosgei.Spring.Boot.JPA.JWT.models.auth.AuthenticationRequest;
 import com.iamkosgei.Spring.Boot.JPA.JWT.models.auth.AuthenticationResponse;
 import com.iamkosgei.Spring.Boot.JPA.JWT.security.MyUserDetailsService;
+import com.iamkosgei.Spring.Boot.JPA.JWT.utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
